@@ -1,0 +1,213 @@
+.orderDetail {
+  .back {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    text-decoration: none;
+    img {
+      margin-right: 12px;
+    }
+    span {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: #4f4f4f;
+    }
+  }
+  .orderDetailMain {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 32px;
+    .productDetail {
+      padding-bottom: 32px;
+      border-bottom: 1px solid #bdbdbd;
+      display: flex;
+      align-items: center;
+
+      .productInfo {
+        margin-left: 56px;
+        .name {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #333333;
+          margin-bottom: 28px;
+        }
+        .property {
+          margin-bottom: 24px;
+          .key {
+            color: #828282;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 4px;
+          }
+          .value {
+            color: #333333;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+
+    .delivery {
+      padding: 32px 0;
+      border-bottom: 1px solid #bdbdbd;
+      h4 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #1d2123;
+        margin-bottom: 24px;
+      }
+      .deliveryInfo {
+        span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: #1d2123;
+          display: block;
+          margin-bottom: 12px;
+          margin-left: 20px;
+        }
+      }
+      .editCol {
+        span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: right;
+          color: #3366ff;
+        }
+      }
+    }
+
+    .payment {
+      padding: 32px 0 16px;
+      h4 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #1d2123;
+        margin-bottom: 24px;
+      }
+      .paymentDetail {
+        padding: 0 20px;
+        .property {
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .key {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #828282;
+          }
+          .value {
+            display: flex;
+            align-items: center;
+            &.withCard {
+              img {
+                margin-right: 8px;
+              }
+              span {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: #1d2123;
+              }
+            }
+            &.price {
+              img {
+                margin-left: 5px;
+              }
+              span {
+                color: #1d2123;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+
+        .sum {
+          display: flex;
+          align-items: center;
+          border-top: 1px solid #e0e0e0;
+          padding: 20px 0 67px;
+          justify-content: space-between;
+          .key {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #1d2123;
+          }
+
+          .value {
+            display: flex;
+            align-items: center;
+            img {
+              margin-left: 5px;
+              filter: invert(29%) sepia(85%) saturate(5029%) hue-rotate(327deg)
+                brightness(93%) contrast(84%);
+            }
+            span {
+              color: #db2c66;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    .rateProduct {
+      text-align: center;
+      button {
+        padding: 15px 40px;
+        border: 1px solid #2dd06e;
+        border-radius: 8px;
+        color: #2dd06e;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        background:#FFFFFF;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .orderDetail {
+    .back{
+      margin-top: 20px;
+    }
+    .orderDetailMain {
+      .productDetail{
+        flex-direction: column;
+        .productInfo{
+          margin-left: 0;
+        }
+      }
+      .delivery{
+        .infoCol{
+          margin-bottom: 15px;
+        }
+        .row{
+          position: relative;
+          .editCol{
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "../../assets/styles/variables.scss";
+
+.productsSettings {
+  display: none;
+  align-items: center;
+  border-bottom: 1px solid #edf1f7;
+  .lineY {
+    height: 31px;
+    width: 1px;
+    background: #edf1f7;
+  }
+  .settingBox {
+    cursor: pointer;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+}
+.productsTop {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .productsCount {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    margin: 0;
+  }
+  .mySelectMenu {
+    display: block;
+    cursor: pointer;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    width: 176px;
+    // height: 40px;
+    padding: 10px 16px;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  
+}
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3333333%;
+  margin-bottom: 30px;
+  & > div {
+    width: 32%;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+  }
+}
+.productsPagenation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  .stepPage {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    border: 1px solid #e0e0e0;
+  }
+  .page {
+    cursor: pointer;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+
+    &.active {
+      background-color: $primary-green;
+      color: white;
+      border-radius: 5px;
+    }
+    &:hover:not(.active) {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .productsSettings {
+    display: flex;
+  }
+  .productsTop {
+    margin: 20px 0;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: 20px;
+    .mySelectMenu {
+      display: none;
+      width: 100%;
+    }
+    .active{
+        display: block;
+    }
+  }
+  .products {
+    gap: 2%;
+    & > div {
+      width: 49%;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.sliderInfo {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    p {
+      a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        span {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: #333333;
+          margin-right: 17px;
+        }
+      }
+    }
+    svg {
+      margin-left: 17px;
+    }
+  }
+  
+  .cardsSlider {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 25px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 767px){
+      .sliderInfo{
+          p{
+              display: none;
+          }
+      }
+  }

@@ -1,0 +1,26 @@
+.productsPage{
+   
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 144px;
+    display: flex;
+    gap: 3%;
+    position: relative;
+}
+.productsFilter{
+    width: 30%;
+}
+.products{
+    width: 67%;
+}
+
+@media (max-width: 767px){
+    .productsFilter{
+        width: 100%;
+        position: absolute;
+        left: -130%;
+    }
+    .products{
+        width: 100%;
+    }
+}

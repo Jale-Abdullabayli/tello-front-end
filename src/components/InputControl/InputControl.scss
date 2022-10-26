@@ -1,0 +1,42 @@
+.inputControl {
+  .label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4f4f4f;
+    margin-bottom: 8px;
+  }
+  .input {
+    position: relative;
+    .eye {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input,textarea {
+      background: #f2f2f2;
+      border-radius: 8px;
+      border: none;
+      padding: 14px 16px;
+      width: 100%;
+      outline: none;
+      &.passwordInput {
+        padding-right: 50px;
+      }
+    }
+
+  }
+
+  .error{
+    font-size: 14px;
+    color: crimson;
+    margin-top: 5px;
+    opacity: 0;
+    height: 21px;
+    &.show{
+      opacity: 1;
+    }
+  }
+}

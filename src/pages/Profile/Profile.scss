@@ -1,0 +1,59 @@
+.profile {
+  .main {
+    background: #e5e5e5;
+    padding:40px 0 170px;
+    .profile {
+      padding: 32px 24px;
+      background: #ffffff;
+      border-radius: 8px;
+      .title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: #4f4f4f;
+        margin-bottom: 35px;
+      }
+      .links {
+        a,span {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          &:not(:last-child) {
+            margin-bottom: 38px;
+          }
+          &.active {
+            img {
+              filter: invert(63%) sepia(59%) saturate(511%) hue-rotate(91deg)
+                brightness(93%) contrast(95%);
+            }
+            h4 {
+              color: #2dd06e;
+            }
+          }
+          img {
+            margin-right: 18px;
+          }
+          h4 {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #4f4f4f;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .orderInfo{
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    .main{
+      padding-bottom:88px ;
+    }
+  }
+}

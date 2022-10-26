@@ -1,0 +1,28 @@
+.priceFilter {
+  .css-187mznn-MuiSlider-root {
+    color: #2dd06e !important;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0 10px;
+  }
+  .range {
+    .min,
+    .max {
+      font-size: 14px;
+      border-bottom: 1px solid rgba(157, 163, 179, 0.5);
+      padding: 0 5px 2px;
+    }
+    .from,
+    .to {
+      font-size: 12px;
+      line-height: 0.6;
+      color: rgba(2, 3, 3, 0.5);
+    }
+    span{
+        margin-right: 10px;
+    }
+  }
+}

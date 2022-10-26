@@ -1,0 +1,51 @@
+.userInfo {
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #4f4f4f;
+    margin-bottom: 16px;
+  }
+  form {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 32px;
+    .inputControl {
+      margin-bottom: 24px;
+    }
+    .editBtn {
+      background: #2dd06e;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      width: fit-content;
+      padding: 14px 82px;
+      margin: auto;
+      margin-top: 8px;
+      img{
+        margin-right: 10px;
+      }
+      span{
+        font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+color: #FFFFFF;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .userInfo {
+    .title{
+      margin-top: 20px;
+    }
+    form {
+      .editBtn{
+        padding: 14px 0;
+        width: 100%;
+      }
+    }
+  }
+}

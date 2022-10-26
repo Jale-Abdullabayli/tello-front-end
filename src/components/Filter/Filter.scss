@@ -1,0 +1,19 @@
+.filterInput{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    accent-color: #2DD06E;
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        background: rgba(0, 214, 143, 0.16);
+        border: 1px solid #2DD06E;
+    }
+}

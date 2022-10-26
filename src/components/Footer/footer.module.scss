@@ -1,0 +1,91 @@
+@import "../../assets/styles/variables.scss";
+
+.footer {
+  background-color: $footer-bck;
+}
+.topFooter {
+  padding: 45px 0px;
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contactLinks {
+  margin-top: 30px;
+  display: flex;
+  gap: 40px;
+}
+.navigator {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  gap: 16px;
+  h4 {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  a {
+    color: white;
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 20px;
+    }
+  }
+  .locationNav {
+    color: $primary-green;
+  }
+}
+.bottomFooter {
+  padding: 26px;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    opacity: 0.8;
+  }
+  & > div {
+    justify-content: space-between;
+  }
+  ul {
+      margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  a {
+    color: white;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 767px) {
+  .navigator {
+    li {
+      text-align: center;
+      a {
+        display: inline-block;
+      }
+    }
+  }
+  .footerSection {
+    margin-bottom: 50px;
+  }
+  .bottomFooter{
+      &>div{
+          flex-direction: column-reverse;
+      }
+      ul{
+          flex-direction: column;
+      }
+  }
+}

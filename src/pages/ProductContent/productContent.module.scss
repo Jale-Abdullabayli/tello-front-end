@@ -1,0 +1,494 @@
+@import "../../assets/styles/variables.scss";
+.commentHeader{
+  font-weight: 500;
+font-size: 20px;
+line-height: 28px;
+color: #000000;
+text-align: center;
+margin: 48px 0 40px;
+}
+.mainInfo {
+  display: flex;
+  gap: 2%;
+  margin-top: 25px;
+  & > div {
+    width: 49%;
+  }
+  .productContent {
+    padding-top: 25px;
+  }
+}
+.productContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .productRatings {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    .ratesCount {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #4f4f4f;
+      margin: 0;
+    }
+    .lineY {
+      height: 16px;
+      width: 1px;
+      background-color: #f2f2f2;
+    }
+    .commentCount {
+      color: #2d9cdb;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 0;
+    }
+  }
+  .productPrice {
+    del {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      margin-right: 8px;
+      color: #828282;
+    }
+    span {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #db2c66;
+    }
+  }
+
+  .lineX {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+  }
+  h5 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4f4f4f;
+  }
+  .productColors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+    .colors {
+      display: flex;
+      gap: 22px;
+      .color {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        &.active {
+          border: 2px solid black !important;
+        }
+      }
+    }
+  }
+  .productCapacities {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    .capacity {
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #4f4f4f;
+      background-color: #f2f2f2;
+      &.active {
+        border: 2px solid black !important;
+      }
+      &:hover {
+        background-color: #828282;
+        color: white;
+        transition: 0.5s;
+      }
+    }
+  }
+  .productCount {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    p {
+      margin: 0;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #1d2123;
+    }
+    span {
+      cursor: pointer;
+      height: 32px;
+      width: 32px;
+      background-color: #f2f2f2;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .basket {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .priceMobile {
+      display: none;
+      flex-direction: column;
+      del {
+        color: #828282;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      span {
+        color: $primary-green;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .addBasketBtn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background-color: $primary-green;
+      color: #ffffff;
+      padding: 14px 48px;
+      border-radius: 8px;
+    }
+  }
+}
+.additionalInfo {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #bdbdbd;
+  .generalInfo {
+    order: 2;
+    width: 50%;
+    padding-right: 8%;
+    h3 {
+      color: #4f4f4f;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 26px;
+    }
+    p {
+      color: #828282;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+      margin-left: 20px;
+    }
+    &.active {
+      display: none;
+    }
+  }
+  .infoBtns {
+    order: 0;
+    width: 100%;
+    border-bottom: 1px solid #bdbdbd;
+    display: flex;
+    align-items: center;
+    gap: 20%;
+    margin: 32px 0;
+    .infoBtn {
+      cursor: pointer;
+      padding: 16px;
+      color: #bdbdbd;
+    }
+    .infoBtn.active {
+      color: #4f4f4f;
+    }
+  }
+  .technicalInfo {
+    order: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 32px;
+    .infoSection {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      h3 {
+        margin-bottom: 8px;
+        color: #4f4f4f;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+      }
+      p {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        margin-left: 20px;
+        color: #828282;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &.active {
+      display: none;
+    }
+  }
+  .commentsSection {
+    order: 3;
+    width: 100%;
+    .comment {
+      border-bottom: 1px solid #828282;
+      padding: 32px 0;
+      display: flex;
+      align-items: center;
+      .commentRate {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        border-right: 1px solid #828282;
+        .commentStars {
+          display: flex;
+          align-items: center;
+          gap: 13px;
+        }
+        h2 {
+          font-style: normal;
+          font-weight: 300;
+          font-size: 72px;
+          line-height: 91px;
+        }
+      }
+      .commentContent {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 5px 0;
+        padding-left: 31px;
+        padding-right: 55px;
+        .commentHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            color: #4f4f4f;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+          }
+          .commentDate {
+            color: #4f4f4f;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+        .productInfo {
+          color: #4f4f4f;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+        }
+        p {
+          color: #4f4f4f;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          margin: 0;
+          margin-top: 8px;
+        }
+      }
+    }
+    &.active {
+      display: none;
+    }
+  }
+}
+.addComment {
+  .commentStars{
+    display: flex;
+    margin-bottom: 20px;
+    gap:10px;
+    justify-content: center;
+    svg{
+      cursor: pointer;
+
+    }
+  }
+  margin-bottom: 100px;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  .inputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 48%;
+    input {
+      background-color: #f2f2f2;
+      border: none;
+      padding: 14px 16px;
+      border-radius: 8px;
+      // width: 100%;
+    }
+  }
+  .textBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 15px;
+    textarea{
+      padding: 14px 16px;
+      width: 100%;
+      height: 200px;
+      background-color: #f2f2f2;
+      border: none;
+      border-radius: 8px;
+    }
+    select{
+      padding: 14px 16px;
+      width: 100%;
+      background-color: #f2f2f2;
+      border: none;
+      border-radius: 8px;
+    }
+  }
+  button{
+    margin-top: 15px;
+    padding: 14px 48px;
+    color: white;
+    background-color: $primary-green;
+    border: none;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mainInfo {
+    flex-direction: column;
+    & > div {
+      width: 100%;
+    }
+  }
+  .productContent {
+    .basket {
+      .priceMobile {
+        display: flex;
+      }
+    }
+  }
+  .additionalInfo {
+    .generalInfo {
+      order: 0;
+      width: 100%;
+      padding: 0;
+      &.active {
+        display: block;
+      }
+    }
+    .infoBtns {
+      border-top: 1px solid #bdbdbd;
+      gap: 0;
+      .infoBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        padding: 16px auto;
+      }
+      .infoBtn.active {
+        color: $primary-green;
+        border-bottom: 2px solid $primary-green;
+      }
+    }
+    .technicalInfo {
+      width: 100%;
+      align-items: flex-start;
+      .infoSection {
+        width: 100%;
+      }
+    }
+    .commentsSection {
+      .comment {
+        flex-direction: column;
+        align-items: center;
+
+        .commentRate {
+          border-right: none;
+          border-bottom: 1px solid #828282;
+          padding: 26px 0;
+        }
+        .commentContent {
+          width: 100%;
+          padding: 0;
+          padding-top: 20px;
+          .commentHeader {
+            flex-direction: column;
+          }
+          .productInfo {
+            text-align: center;
+          }
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .addComment{
+    .inputBox{
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+}

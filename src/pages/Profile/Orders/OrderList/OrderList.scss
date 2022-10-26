@@ -1,0 +1,19 @@
+.orderList {
+  h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #4f4f4f;
+    margin-bottom: 32px;
+  }
+  .row{
+    align-items:center;
+  }
+}
+
+@media (max-width: 768px) {
+  .orderList {
+    h4 {
+      margin-top: 20px;
+    }}
+}
