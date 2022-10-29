@@ -44,26 +44,19 @@ const LoginForm = () => {
     try {
       const response = await dispatch(signin(formData));
 
-    } catch (err) {
-    }
-  }
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-
-  useEffect(() => {
-    if (!auth.loading) {
-      if (auth.error) {
-        toast.error(auth.error);
-      }
-      if (auth.profile) {
+      
+      if (!response?.error) {
         toast.success('Hesaba daxil olundu');
         navigate("/profile/order-list", { replace: true });
       }
+      else {
+        toast.error(response.payload.message);
+      }
+    } catch (err) {
     }
+  }
 
-  }, [auth]);
+
 
   return (
     <Container>

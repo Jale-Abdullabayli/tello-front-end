@@ -42,30 +42,25 @@ const Register = () => {
   let navigate = useNavigate();
 
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const register = async (e) => {
     e.preventDefault();
     try {
       const response = await dispatch(signup(formData));
+      if (!response?.error) {
+        toast.success('Qeydiyyat uğurla tamamlandı');
+        navigate("/profile/order-list", { replace: true });
+
+      }
+      else {
+               toast.error(response.payload.message);
+
+      }
     } catch (err) {
 
     }
   }
 
-  useEffect(() => {
-    if (!auth.loading) {
-      if (auth.error) {
-        toast.error(auth.error);
-      }
-      if (auth.profile) {
-        toast.success('Qeydiyyat uğurla tamamlandı');
-        navigate("/profile/order-list", { replace: true });
-      }
-    }
 
-  }, [auth]);
 
   return (
     <Container>
